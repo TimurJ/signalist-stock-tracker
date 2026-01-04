@@ -13,3 +13,8 @@ export function getFlagEmoji(countryCode: string) {
 
   return String.fromCodePoint(...codePoints)
 }
+
+export function capitalise(value: string) {
+  const lower = value.toLowerCase()
+  return lower.charAt(0).toUpperCase() + lower.slice(1)
+}
