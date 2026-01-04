@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import useTradingViewWidget from './hooks/useTradingViewWidget'
+import useTradingViewWidget from '@/hooks/useTradingViewWidget'
 import { cn } from '@/lib/utils'
 
 interface TradingViewWidgetProps {
@@ -12,13 +12,13 @@ interface TradingViewWidgetProps {
   className?: string
 }
 
-const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
+const TradingViewWidget = ({
   title,
   scriptUrl,
   config,
   height = 600,
   className,
-}) => {
+}: TradingViewWidgetProps) => {
   const containerRef = useTradingViewWidget(scriptUrl, config, height)
 
   return (
