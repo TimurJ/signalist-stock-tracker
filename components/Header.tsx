@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavItems from './NavItems'
 import UserDropdown from './UserDropdown'
+import CurrencySelect from '@/components/CurrencySelect'
 
 const Header = () => {
   return (
@@ -19,7 +20,10 @@ const Header = () => {
         <nav className="hidden sm:block">
           <NavItems />
         </nav>
-        <UserDropdown />
+        <div className="flex">
+          <CurrencySelect />
+          <UserDropdown />
+        </div>
       </div>
     </header>
   )
